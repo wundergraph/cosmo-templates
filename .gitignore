@@ -1,0 +1,27 @@
+# Node.js dependencies
+node_modules/
+
+# TypeScript build output
+dist/
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+
+# IDE files
+.vscode/
+.idea/
+
+# Generated code
+typescript-connect-rpc-fastify/src/generated/
+
+# Proto files
+typescript-connect-rpc-fastify/src/proto/
+
+# Fastify router binary
+typescript-connect-rpc-fastify/router/
