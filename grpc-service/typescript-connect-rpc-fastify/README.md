@@ -9,6 +9,7 @@ To run this stack in production, we recommend using [Cosmo Schema Registry](http
 ## Getting Started
 
 ```bash
+npm install
 npm run bootstrap
 npm run start
 ```
