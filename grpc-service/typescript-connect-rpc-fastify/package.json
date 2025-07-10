@@ -11,6 +11,7 @@
     "router:download": "npx wgc router download-binary",
     "start:router": "./router/router -config ./router.config.yaml",
     "start:service": "tsx src/index.ts",
+    "bootstrap": "npm run generate && npm run router:download",
     "start": "concurrently \"npm run start:router\" \"npm run start:service\""
   },
   "keywords": [],
