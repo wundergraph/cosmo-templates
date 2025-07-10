@@ -4,7 +4,7 @@ This is a template to create a GraphQL Service using Cosmo Connect.
 The Stack is Cosmo Router as the GraphQL-to-gRPC Gateway,
 and Connect RPC + Fastify as the backend service.
 
-To run this stack in production, we recommend using [Cosmo Schema Registry](https://cosmo-docs.wundergraph.com/schema-registry) for schema management, breaking change detection, metrics and observability.
+To run this stack in production, we recommend using [Cosmo Schema Registry](https://cosmo-docs.wundergraph.com/overview) for schema management, breaking change detection, metrics and observability.
 
 ## Getting Started
 
