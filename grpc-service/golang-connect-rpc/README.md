@@ -1,4 +1,4 @@
-# TypeScript Connect RPC Fastify Service
+# Golang Connect RPC Service
 
 This is a template to create a GraphQL Service using Cosmo Connect.
 The Stack is Cosmo Router as the GraphQL-to-gRPC Gateway,
@@ -9,14 +9,25 @@ To run this stack in production, we recommend using [Cosmo Schema Registry](http
 ## Getting Started
 
 ```bash
-npm install
-npm run bootstrap
-npm run start
+make
+make start
 ```
+
+Access the GraphQL Playground at [http://localhost:3002](http://localhost:3002).
 
 ## Development
 
+Change the GraphQL schema in `./src/graph/schema.graphql` and run:
 
+```bash
+make generate
+```
+
+Implement the updated proto service in `./pkg/service/service.go` and run:
+
+```bash
+make start
+```
 
 ## Notes
 
@@ -25,8 +36,11 @@ npm run start
 - `router.execution.config.json` is the output of running `npm run generate:router`, don't modify this file manually
 - `buf.gen.yaml` is the configuration for generating the connect rpc files
 - `buf.yaml` is the configuration for connect rpc
-- `./src/index.ts` is the entry point for the fastify service
-- `./src/routes.ts` is the entry point for the connect rpc service implementation
-- `./src/graph/schema.graphql` is the source of truth for the service schema/contract
-- `./src/proto/service/v1/service.v1.proto` is the generated proto file from the GraphQL Schema
-- `./router/router` is the Router binary
+- `pkg/service/service.go` is the implementation of the connect rpc service, you can add your business logic here
+- `pkg/graph/schema.graphql` is the source of truth for the GraphQL Schema, modify it to change the API
+- `router/router` is the Cosmo Router binary
+- `pkg/generated/service/v1/service.pb.go` is the generated code to encode/decode gRPC messages, don't modify this file manually
+- `pkg/generated/service/v1/v1connect/service.connect.go` is the generated code to implement the connect rpc service, don't modify this file manually
+- `pkg/proto/service/v1/service.proto` is the proto file that is generated from the GraphQL schema, don't modify this file manually
+- `pkg/proto/service/v1/mapping.json` is the mapping file between GraphQL types and proto types, don't modify this file manually
+- `pkg/proto/service/v1/service.proto.lock.json` is the lock file for the proto generation, ensuring that e.g. deleted field indentifiers are not reused, don't modify this file manually
