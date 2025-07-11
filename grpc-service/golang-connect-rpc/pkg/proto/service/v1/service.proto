@@ -1,0 +1,18 @@
+syntax = "proto3";
+package service.v1;
+
+option go_package = "github.com/wundergraph/service/pkg/generated/service/v1";
+
+// Service definition for ServiceService
+service ServiceService {
+  rpc QueryHello(QueryHelloRequest) returns (QueryHelloResponse) {}
+}
+
+// Request message for hello operation.
+message QueryHelloRequest {
+  string name = 1;
+}
+// Response message for hello operation.
+message QueryHelloResponse {
+  string hello = 1;
+}

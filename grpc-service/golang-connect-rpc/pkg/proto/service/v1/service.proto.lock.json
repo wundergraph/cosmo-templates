@@ -1,0 +1,60 @@
+{
+  "version": "1.0.0",
+  "messages": {
+    "Query": {
+      "fields": {
+        "hello": 3
+      },
+      "reservedNumbers": [
+        1,
+        2,
+        4
+      ]
+    },
+    "QueryHello": {
+      "fields": {
+        "name": 1
+      }
+    },
+    "QueryHelloRequest": {
+      "fields": {
+        "name": 1
+      }
+    },
+    "QueryHelloResponse": {
+      "fields": {
+        "hello": 1
+      }
+    },
+    "QueryHello2": {
+      "fields": {
+        "name": 1
+      }
+    },
+    "QueryHello2Request": {
+      "fields": {
+        "name": 1
+      }
+    },
+    "QueryHello2Response": {
+      "fields": {
+        "hello_2": 1
+      }
+    },
+    "QueryObjResponse": {
+      "fields": {
+        "obj": 1
+      }
+    },
+    "Object": {
+      "fields": {
+        "age": 2,
+        "name": 3
+      },
+      "reservedNumbers": [
+        1
+      ]
+    }
+  },
+  "enums": {}
+}
